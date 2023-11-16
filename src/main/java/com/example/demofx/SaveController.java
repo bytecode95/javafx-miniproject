@@ -75,16 +75,12 @@ public class SaveController {
 
     }
 
-            public void clear(){
-                txtbookid.setText("");
-                txtbookname.setText("");
-                txtbookisbn.setText("");
-                txtbookprice.setText("");
-                txtbookqty.setText("");
-            }
-
-
-
-
+    public void clear(){
+        txtbookid.setText("");
+        txtbookname.setText("");
+        txtbookisbn.setText("");
+        txtbookprice.setText("");
+        txtbookqty.setText("");
+    }
 
 }
