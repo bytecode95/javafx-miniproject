@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demofx.UpdateController">
+   <children>
+      <Text fill="#170ad1" layoutX="174.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Update Form" wrappingWidth="228.53668212890625">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtbookqty" layoutX="125.0" layoutY="274.0" prefHeight="34.0" prefWidth="302.0" promptText="Enter Book Quantity" />
+      <Button layoutX="418.0" layoutY="60.0" mnemonicParsing="false" onAction="#search" prefHeight="34.0" prefWidth="115.0" style="-fx-background-color: green;" text="Search" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtbookname" layoutX="125.0" layoutY="124.0" prefHeight="34.0" prefWidth="302.0" promptText="Enter Book Name" />
+      <TextField fx:id="txtbookisbn" layoutX="125.0" layoutY="174.0" prefHeight="34.0" prefWidth="302.0" promptText="Enter Book ISBN" />
+      <TextField fx:id="txtbookprice" layoutX="125.0" layoutY="224.0" prefHeight="34.0" prefWidth="302.0" promptText=" Enter Book Price" />
+      <TextField fx:id="txtbookid" layoutX="75.0" layoutY="60.0" prefHeight="34.0" prefWidth="302.0" promptText="Enter BookID" />
+      <Button layoutX="75.0" layoutY="328.0" mnemonicParsing="false" onAction="#update" prefHeight="34.0" prefWidth="115.0" style="-fx-background-color: #d35400;" text="Update" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="360.0" layoutY="328.0" mnemonicParsing="false" onAction="#cancel" prefHeight="34.0" prefWidth="115.0" style="-fx-background-color: #c0392b;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
