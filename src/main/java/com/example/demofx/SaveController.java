@@ -2,6 +2,7 @@ package com.example.demofx;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
 import java.sql.Connection;
@@ -31,7 +32,7 @@ public class SaveController {
     }
 
     @FXML
-    void save(ActionEvent event) throws ClassNotFoundException {
+    void save(ActionEvent event)  {
         String id = txtbookid.getText();
         String name = txtbookname.getText();
         String isbn = txtbookisbn.getText();
@@ -55,13 +56,35 @@ public class SaveController {
             int result = stm.executeUpdate();
             if(result>0){
                 System.out.println("Successfully added!..");
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Successfully added!");
+                alert.show();
+                clear();
             }else{
                 System.out.println("Process Failed!..");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Save Failed!");
+                alert.show();
             }
 
         }catch(ClassNotFoundException | SQLException ex){
             throw new RuntimeException(ex);
         }
 
+
+
     }
+
+            public void clear(){
+                txtbookid.setText("");
+                txtbookname.setText("");
+                txtbookisbn.setText("");
+                txtbookprice.setText("");
+                txtbookqty.setText("");
+            }
+
+
+
+
+
 }
