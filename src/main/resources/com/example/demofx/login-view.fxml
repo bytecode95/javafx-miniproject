@@ -8,27 +8,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demofx.LoginController">
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demofx.LoginController">
    <children>
-      <Label layoutX="99.0" layoutY="26.0" prefHeight="38.0" prefWidth="411.0" text="Stduent Management System" textAlignment="CENTER" textFill="#22bd3b" wrapText="true">
+      <Label layoutX="233.0" layoutY="23.0" prefHeight="38.0" prefWidth="154.0" text="Login Page" textAlignment="CENTER" textFill="#22bd3b" wrapText="true">
          <font>
             <Font name="Arial Black" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="249.0" layoutY="70.0" prefHeight="19.0" prefWidth="87.0" text="Login Page">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <TextField layoutX="259.0" layoutY="108.0" prefHeight="26.0" prefWidth="248.0" promptText="Enter Username" />
+      <TextField fx:id="txtUsername" layoutX="259.0" layoutY="108.0" prefHeight="26.0" prefWidth="248.0" promptText="Enter Username" />
       <Label layoutX="136.0" layoutY="111.0" prefHeight="19.0" prefWidth="87.0" text="UserName" />
       <Label layoutX="138.0" layoutY="157.0" prefHeight="19.0" prefWidth="87.0" text="Password" />
-      <Button layoutX="165.0" layoutY="228.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="256.0" style="-fx-background-color: pink;" text="Login" textFill="#6117c1">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Button>
-      <PasswordField layoutX="261.0" layoutY="154.0" prefHeight="26.0" prefWidth="248.0" promptText="Enter Password" />
+      <PasswordField fx:id="txtPassword" layoutX="261.0" layoutY="154.0" prefHeight="26.0" prefWidth="248.0" promptText="Enter Password" />
       <Text layoutX="204.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Made Sri Lanak by Chethana Virajini" />
+      <Button layoutX="233.0" layoutY="243.0" mnemonicParsing="false" onAction="#login" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: blue;" text="Login" textFill="WHITE" />
    </children>
 </AnchorPane>

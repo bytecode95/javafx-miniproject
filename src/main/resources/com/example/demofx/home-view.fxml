@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demofx.HomeController">
+   <children>
+      <Text fill="#cf0a0a" layoutX="173.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboad Home" wrappingWidth="235.7366943359375">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <Button layoutX="217.0" layoutY="87.0" mnemonicParsing="false" onAction="#add" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #f1c40f;" text="Add">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="217.0" layoutY="150.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #2980b9;" text="Delete">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="217.0" layoutY="213.0" mnemonicParsing="false" onAction="#update" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #8e44ad;" text="Update">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="217.0" layoutY="273.0" mnemonicParsing="false" onAction="#getall" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #16a085;" text="GetAll">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
