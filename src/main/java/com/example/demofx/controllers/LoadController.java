@@ -1,6 +1,8 @@
 package com.example.demofx.controllers;
 
+import com.example.demofx.model.BookModel;
 import com.example.demofx.tm.BookTM;
+import com.example.demofx.to.Book;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,39 +22,17 @@ public class LoadController implements Initializable {
 
     @FXML
     void getall(ActionEvent event) {
+        ArrayList<Book> books = BookModel.loadAllBook();
+        ArrayList<BookTM> bookTMS = new ArrayList<>();
 
-    }
-
-    //code for get details from db
-    public ArrayList<BookTM> loadAll(){
-        //load connector -- driver
-        try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            //create connection with database
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/apjd_book_store", "root", "Vira@95714");
-            //create sql query
-            PreparedStatement stm = connection.prepareStatement("select * from book;");
-            ResultSet resultSet = stm.executeQuery();
-
-            ArrayList<BookTM> list = new ArrayList<>();
-
-            while (resultSet.next()){
-                BookTM tm = new BookTM();
-                tm.setId(resultSet.getString(1));
-                tm.setName(resultSet.getString(2));
-                tm.setIsbn(resultSet.getString(3));
-                tm.setQty(resultSet.getInt(4));
-                tm.setPrice(resultSet.getDouble(5));
-
-                list.add(tm);
-            }
-            return list;
-
-        }catch(ClassNotFoundException | SQLException ex){
-            throw new RuntimeException(ex);
+        for(Book b: books){
+            bookTMS.add(new BookTM(b.getId(), b.getName(), b.getIsbn(), b.getQty(), b.getPrice()));
         }
 
+        tblBooks.setItems(FXCollections.observableArrayList(bookTMS));
     }
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -62,7 +42,12 @@ public class LoadController implements Initializable {
         tblBooks.getColumns().get(3).setCellValueFactory(new PropertyValueFactory<>("qty"));
         tblBooks.getColumns().get(4).setCellValueFactory(new PropertyValueFactory<>("price"));
 
-        ArrayList<BookTM> bookTMS = loadAll();
+        ArrayList<Book> books = BookModel.loadAllBook();
+        ArrayList<BookTM> bookTMS = new ArrayList<>();
+
+        for(Book b: books){
+            bookTMS.add(new BookTM(b.getId(), b.getName(), b.getIsbn(), b.getQty(), b.getPrice()));
+        }
 
         tblBooks.setItems(FXCollections.observableArrayList(bookTMS));
     }

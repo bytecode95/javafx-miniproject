@@ -7,6 +7,14 @@ public class BookTM {
     private int qty;
     private double price;
 
+    public BookTM(String id, String name, String isbn, int qty, double price) {
+        this.id = id;
+        this.name = name;
+        this.isbn = isbn;
+        this.qty = qty;
+        this.price = price;
+    }
+
     public String getId() {
         return id;
     }

@@ -1,12 +1,11 @@
 package com.example.demofx.model;
 
+import com.example.demofx.tm.BookTM;
 import com.example.demofx.to.Book;
 
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 
 public class BookModel {
     public static boolean SaveBook(Book book){
@@ -43,5 +42,33 @@ public class BookModel {
         return true;
     }
 
+    public static ArrayList<Book> loadAllBook(){
+        //load connector -- driver
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //create connection with database
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/apjd_book_store", "root", "Vira@95714");
+            //create sql query
+            PreparedStatement stm = connection.prepareStatement("select * from book;");
+            ResultSet resultSet = stm.executeQuery();
+
+            ArrayList<Book> list = new ArrayList<>();
+
+            while (resultSet.next()){
+                Book tm = new Book();
+                tm.setId(resultSet.getString(1));
+                tm.setName(resultSet.getString(2));
+                tm.setIsbn(resultSet.getString(3));
+                tm.setQty(resultSet.getInt(4));
+                tm.setPrice(resultSet.getDouble(5));
+
+                list.add(tm);
+            }
+            return list;
+
+        }catch(ClassNotFoundException | SQLException ex){
+            throw new RuntimeException(ex);
+        }
+    }
 
 }
