@@ -1,5 +1,6 @@
-package com.example.demofx;
+package com.example.demofx.controllers;
 
+import com.example.demofx.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

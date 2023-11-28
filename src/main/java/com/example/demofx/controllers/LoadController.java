@@ -1,5 +1,6 @@
-package com.example.demofx;
+package com.example.demofx.controllers;
 
+import com.example.demofx.tm.BookTM;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

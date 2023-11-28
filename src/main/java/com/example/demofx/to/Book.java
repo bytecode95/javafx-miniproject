@@ -1,11 +1,19 @@
-package com.example.demofx;
+package com.example.demofx.to;
 
-public class BookTM {
+public class Book {
     private String id;
     private String name;
     private String isbn;
     private int qty;
     private double price;
+
+    public Book(String id, String name, String isbn, int qty, double price) {
+        this.id = id;
+        this.name = name;
+        this.isbn = isbn;
+        this.qty = qty;
+        this.price = price;
+    }
 
     public String getId() {
         return id;

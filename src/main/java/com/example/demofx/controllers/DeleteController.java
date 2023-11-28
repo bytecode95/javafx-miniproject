@@ -1,4 +1,4 @@
-package com.example.demofx;
+package com.example.demofx.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

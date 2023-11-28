@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demofx.HomeController">
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demofx.controllers.HomeController">
    <children>
       <Text fill="#cf0a0a" layoutX="173.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboad Home" wrappingWidth="235.7366943359375">
          <font>
