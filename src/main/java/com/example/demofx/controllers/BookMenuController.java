@@ -5,14 +5,32 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HomeController {
+public class BookMenuController {
     @FXML
     private AnchorPane root;
+
+    @FXML
+    void back(MouseEvent event) {
+        try {
+            //catch stage
+            Stage stage = (Stage) this.root.getScene().getWindow();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("view/main-menu-view.fxml"));
+            //scene load
+            Scene scene = new Scene(fxmlLoader.load());
+
+            //set scene to stage
+            stage.setScene(scene);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     @FXML
     void add(ActionEvent event) {
@@ -20,7 +38,7 @@ public class HomeController {
             //catch stage
             Stage stage = (Stage) this.root.getScene().getWindow();
 
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("save-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("view/save-view.fxml"));
             //scene load
             Scene scene = new Scene(fxmlLoader.load());
 
@@ -38,7 +56,7 @@ public class HomeController {
             //catch stage
             Stage stage = (Stage) this.root.getScene().getWindow();
 
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("delete-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("view/delete-view.fxml"));
             //scene load
             Scene scene = new Scene(fxmlLoader.load());
 
@@ -56,7 +74,7 @@ public class HomeController {
             //catch stage
             Stage stage = (Stage) this.root.getScene().getWindow();
 
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("load-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("view/load-view.fxml"));
             //scene load
             Scene scene = new Scene(fxmlLoader.load());
 
@@ -74,7 +92,7 @@ public class HomeController {
             //catch stage
             Stage stage = (Stage) this.root.getScene().getWindow();
 
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("update-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("view/update-view.fxml"));
             //scene load
             Scene scene = new Scene(fxmlLoader.load());
 

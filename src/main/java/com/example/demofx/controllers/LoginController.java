@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -29,21 +30,26 @@ public class LoginController {
         String userName = txtUsername.getText();
         String password = txtPassword.getText();
 
-        System.out.println(userName +" " +password);
+        if(userName.equals("admin") && password.equals("1234")){
+            try {
+                //catch stage
+                Stage stage = (Stage) this.root.getScene().getWindow();
 
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("view/main-menu-view.fxml"));
+                //scene load
+                Scene scene = new Scene(fxmlLoader.load());
 
-        try {
-            //catch stage
-            Stage stage = (Stage) this.root.getScene().getWindow();
-
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("home-view.fxml"));
-            //scene load
-            Scene scene = new Scene(fxmlLoader.load());
-
-            //set scene to stage
-            stage.setScene(scene);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+                //set scene to stage
+                stage.setScene(scene);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Login Error");
+            alert.show();
         }
+
+
     }
 }
