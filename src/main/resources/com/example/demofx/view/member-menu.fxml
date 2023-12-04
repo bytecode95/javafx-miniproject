@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demofx.controllers.MemberMenuController">
+   <children>
+      <AnchorPane fx:id="root" prefHeight="410.0" prefWidth="610.0" style="-fx-background-color: #ecf0f1;">
+         <children>
+            <Text fill="#cf140a" layoutX="103.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Management Dashboard" wrappingWidth="420.5365905761719">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Text>
+            <Button layoutX="217.0" layoutY="87.0" mnemonicParsing="false" onAction="#add" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #f1c40f;" text="Add">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="217.0" layoutY="150.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #2980b9;" text="Delete">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="217.0" layoutY="213.0" mnemonicParsing="false" onAction="#update" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #8e44ad;" text="Update">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="217.0" layoutY="273.0" mnemonicParsing="false" onAction="#getAll" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #16a085;" text="GetAll">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="52.0" fitWidth="70.0" layoutX="14.0" layoutY="17.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-back-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
