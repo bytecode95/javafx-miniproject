@@ -18,6 +18,10 @@ public class Book {
         this.price = price;
     }
 
+    public Book(String id) {
+        this.id = id;
+    }
+
     public String getId() {
         return id;
     }

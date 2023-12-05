@@ -33,6 +33,17 @@ public class MainMenuController {
 
     @FXML
     void ManageMembers(ActionEvent event) {
+        //catch stage
+        Stage stage = (Stage) root.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("view/member-menu-view.fxml"));
+        try {
+            Scene scene = new Scene(fxmlLoader.load());
+
+            //set scene to stage
+            stage.setScene(scene);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
