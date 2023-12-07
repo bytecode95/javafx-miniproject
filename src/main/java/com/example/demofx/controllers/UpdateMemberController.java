@@ -1,6 +1,7 @@
 package com.example.demofx.controllers;
 
 import com.example.demofx.HelloApplication;
+import com.example.demofx.model.MemberModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -57,25 +58,8 @@ public class UpdateMemberController {
     @FXML
     void search(ActionEvent event) {
         String id = txtMemberID.getText();
+        MemberModel.searchMember(id);
 
-        //create connection
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/apjd_book_store","root","Vira@95714");
-            PreparedStatement stm = connection.prepareStatement("select * from member where mid=?");
-            stm.setObject(1, id);
-
-            ResultSet resultSet = stm.executeQuery();
-
-            while(resultSet.next()){
-                txtMemberName.setText(resultSet.getString(2));
-                txtMemberEmail.setText(resultSet.getString(3));
-                txtMemberAge.setText(String.valueOf(resultSet.getInt(4)));
-                txtMemberAddress.setText(resultSet.getString(5));
-            }
-        } catch (ClassNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
-        }
 
     }
 

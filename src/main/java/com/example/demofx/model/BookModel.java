@@ -52,8 +52,27 @@ public class BookModel {
 
 
 
-    public static boolean UpdateBook(){
-        return true;
+    public static boolean UpdateBook(Book book){
+        try{
+            Connection connection = DBConnection.getDbConnection().getConnection();
+            //create sql query
+            PreparedStatement stm = connection.prepareStatement("update book set name=?, isbn=?,quantity=?, price=? where bid=?");
+            stm.setObject(1, book.getName());
+            stm.setObject(2, book.getIsbn());
+            stm.setObject(3, book.getQty());
+            stm.setObject(4, book.getPrice());
+            stm.setObject(5, book.getId());
+
+            int executed = stm.executeUpdate();
+            if(executed>0){
+                return true;
+            }else{
+                return false;
+            }
+
+        }catch(ClassNotFoundException | SQLException ex){
+            throw new RuntimeException(ex);
+        }
     }
 
     public static ArrayList<Book> loadAllBook(){
@@ -81,6 +100,32 @@ public class BookModel {
         }catch(ClassNotFoundException | SQLException ex){
             throw new RuntimeException(ex);
         }
+    }
+
+    public static Book searchBook(String id){
+        //load connector -- driver
+        try{
+            Connection connection = DBConnection.getDbConnection().getConnection();
+            //create sql query
+            PreparedStatement stm = connection.prepareStatement("select * from book where bid=?");
+            stm.setObject(1, id);
+
+            ResultSet resultSet = stm.executeQuery();
+
+            Book book = new Book();
+
+            while (resultSet.next()){
+                book.setName(resultSet.getString(2));
+                book.setIsbn(resultSet.getString(3));
+                book.setQty(resultSet.getInt(4));
+                book.setPrice(resultSet.getDouble(5));
+            }
+            return book;
+
+        }catch(ClassNotFoundException | SQLException ex){
+            throw new RuntimeException(ex);
+        }
+
     }
 
 }

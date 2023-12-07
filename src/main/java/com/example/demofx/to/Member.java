@@ -7,6 +7,9 @@ public class Member {
     private int age;
     private String location;
 
+    public Member() {
+    }
+
     public Member(String id, String name, String email, int age, String location) {
         this.id = id;
         this.name = name;

@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane fx:id="root" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demofx.controllers.BookIssueController">
    <children>
       <Text fill="#cf0a0a" layoutX="303.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Issue" wrappingWidth="164.53662109375">
@@ -21,7 +20,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="txtxBookId" layoutX="123.0" layoutY="115.0" prefHeight="35.0" prefWidth="215.0" promptText="Enter Book ID" />
+      <TextField fx:id="txtBookId" layoutX="123.0" layoutY="115.0" onAction="#bookSearch" prefHeight="35.0" prefWidth="215.0" promptText="Enter Book ID" />
       <TextField fx:id="txtBookName" layoutX="123.0" layoutY="163.0" prefHeight="35.0" prefWidth="215.0" />
       <TextField fx:id="txtBookIsbn" layoutX="123.0" layoutY="214.0" prefHeight="35.0" prefWidth="215.0" />
       <TextField fx:id="txtQuantity" layoutX="123.0" layoutY="267.0" prefHeight="35.0" prefWidth="215.0" />
@@ -36,7 +35,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="txtMemberId" layoutX="543.0" layoutY="125.0" prefHeight="35.0" prefWidth="215.0" promptText="Enter Member ID" />
+      <TextField fx:id="txtMemberId" layoutX="543.0" layoutY="125.0" onAction="#memberSearch" prefHeight="35.0" prefWidth="215.0" promptText="Enter Member ID" />
       <TextField fx:id="txtMemberName" layoutX="543.0" layoutY="173.0" prefHeight="35.0" prefWidth="215.0" />
       <TextField fx:id="txtEmail" layoutX="543.0" layoutY="224.0" prefHeight="35.0" prefWidth="215.0" />
       <TextField fx:id="txtAge" layoutX="543.0" layoutY="277.0" prefHeight="35.0" prefWidth="215.0" />
