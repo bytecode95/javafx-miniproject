@@ -1,5 +1,6 @@
 package com.example.demofx.model;
 
+import com.example.demofx.db.DBConnection;
 import com.example.demofx.to.Member;
 
 import java.sql.Connection;
@@ -12,10 +13,7 @@ public class MemberModel {
     public static boolean SaveMember(Member member){
         //create connection
         try {
-            //register the Driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            //create connection object
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/apjd_book_store","root","Vira@95714");
+            Connection connection = DBConnection.getDbConnection().getConnection();
             //create statement object
             PreparedStatement stm = connection.prepareStatement("insert into member(mid, member_name, email,age,address) values (?,?,?,?,?)");
             stm.setObject(1, member.getId());
@@ -39,8 +37,7 @@ public class MemberModel {
     public static boolean DeleteMember(Member member){
         //create database connection
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/apjd_book_store","root","Vira@95714");
+            Connection connection = DBConnection.getDbConnection().getConnection();
             PreparedStatement stm = connection.prepareStatement("delete from member where mid=?");
             stm.setObject(1, member.getId());
             int result = stm.executeUpdate();

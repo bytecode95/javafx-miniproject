@@ -1,4 +1,5 @@
 package com.example.demofx.model;
+import com.example.demofx.db.DBConnection;
 import com.example.demofx.to.Book;
 import java.sql.*;
 import java.util.ArrayList;
@@ -7,11 +8,9 @@ import java.util.ArrayList;
 
 public class BookModel {
     public static boolean SaveBook(Book book){
-        //load connector -- driver
+
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            //create connection with database
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/apjd_book_store", "root", "Vira@95714");
+            Connection connection = DBConnection.getDbConnection().getConnection();
             //create sql query
             PreparedStatement stm = connection.prepareStatement("insert into book values(?,?,?,?,?)");
             stm.setObject(1, book.getId());
@@ -35,9 +34,7 @@ public class BookModel {
     public static boolean DeleteBook(Book book){
         //load connector
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            //Create connection with database
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/apjd_book_store","root","Vira@95714");
+            Connection connection = DBConnection.getDbConnection().getConnection();
             //create sql query
             PreparedStatement stm = connection.prepareStatement("delete from book where bid=?");
             stm.setObject(1, book.getId());
@@ -53,6 +50,8 @@ public class BookModel {
         }
     }
 
+
+
     public static boolean UpdateBook(){
         return true;
     }
@@ -60,9 +59,7 @@ public class BookModel {
     public static ArrayList<Book> loadAllBook(){
         //load connector -- driver
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            //create connection with database
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/apjd_book_store", "root", "Vira@95714");
+            Connection connection = DBConnection.getDbConnection().getConnection();
             //create sql query
             PreparedStatement stm = connection.prepareStatement("select * from book;");
             ResultSet resultSet = stm.executeQuery();

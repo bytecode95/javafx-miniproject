@@ -1,5 +1,4 @@
 package com.example.demofx.controllers;
-
 import com.example.demofx.HelloApplication;
 import com.example.demofx.model.BookModel;
 import com.example.demofx.tm.BookTM;
@@ -15,10 +14,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
-import java.sql.*;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
