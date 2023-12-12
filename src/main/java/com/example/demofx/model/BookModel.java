@@ -39,6 +39,7 @@ public class BookModel {
             PreparedStatement stm = connection.prepareStatement("delete from book where bid=?");
             stm.setObject(1, book.getId());
             int result = stm.executeUpdate();
+            System.out.println(result);
             if(result>0){
                 return true;
             }else{

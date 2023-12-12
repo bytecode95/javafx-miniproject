@@ -2,6 +2,7 @@ package com.example.demofx.controllers;
 
 import com.example.demofx.HelloApplication;
 import com.example.demofx.model.BookModel;
+import com.example.demofx.model.IssueModel;
 import com.example.demofx.model.MemberModel;
 import com.example.demofx.to.Book;
 import com.example.demofx.to.Member;
@@ -92,6 +93,6 @@ public class BookIssueController {
 
     @FXML
     void issueBook(ActionEvent event) {
-
+        IssueModel.issueBook(txtBookId.getText(), txtMemberId.getText());
     }
 }
