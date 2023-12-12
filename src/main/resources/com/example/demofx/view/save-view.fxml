@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -8,32 +9,42 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demofx.controllers.SaveController">
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demofx.controllers.SaveController">
    <children>
-      <Text fill="#0e06ea" layoutX="183.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Saving Form" wrappingWidth="233.3367462158203">
+      <ImageView fitHeight="700.0" fitWidth="700.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Library-Management-System-1318x840%20(1).jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="177.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD BOOK TO LIBRARY" wrappingWidth="323.7367401123047">
          <font>
             <Font name="System Bold" size="27.0" />
          </font>
       </Text>
-      <TextField fx:id="txtbookid" layoutX="142.0" layoutY="56.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter BookID" />
-      <TextField fx:id="txtbookname" layoutX="142.0" layoutY="101.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter Book Name" />
-      <TextField fx:id="txtbookisbn" layoutX="142.0" layoutY="150.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter Book ISBN" />
-      <TextField fx:id="txtbookprice" layoutX="142.0" layoutY="193.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter Book Price" />
-      <TextField fx:id="txtbookqty" layoutX="142.0" layoutY="239.0" prefHeight="42.0" prefWidth="336.0" promptText="Enter Book Quantity" />
-      <Button layoutX="99.0" layoutY="312.0" mnemonicParsing="false" onAction="#save" prefHeight="42.0" prefWidth="143.0" style="-fx-background-color: green;" text="Save" textFill="WHITE">
+      <TextField fx:id="txtbookid" layoutX="171.0" layoutY="170.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter BookID" />
+      <TextField fx:id="txtbookname" layoutX="171.0" layoutY="250.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter Book Name" />
+      <TextField fx:id="txtbookisbn" layoutX="171.0" layoutY="332.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter Book ISBN" />
+      <TextField fx:id="txtbookprice" layoutX="171.0" layoutY="416.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter Book Price" />
+      <TextField fx:id="txtbookqty" layoutX="171.0" layoutY="492.0" prefHeight="42.0" prefWidth="336.0" promptText="Enter Book Quantity" />
+      <Button layoutX="91.0" layoutY="629.0" mnemonicParsing="false" onAction="#save" prefHeight="42.0" prefWidth="143.0" style="-fx-background-color: black;" text="SAVE" textFill="WHITE">
          <font>
-            <Font size="16.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="378.0" layoutY="312.0" mnemonicParsing="false" onAction="#cancel" prefHeight="42.0" prefWidth="143.0" style="-fx-background-color: red;" text="Cancel" textFill="WHITE">
+      <Button layoutX="465.0" layoutY="629.0" mnemonicParsing="false" onAction="#cancel" prefHeight="42.0" prefWidth="143.0" style="-fx-background-color: black;" text="CANCEL" textFill="WHITE">
          <font>
-            <Font size="16.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <ImageView fitHeight="52.0" fitWidth="70.0" layoutX="46.0" layoutY="27.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="52.0" fitWidth="70.0" layoutX="39.0" layoutY="20.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/icons8-back-48.png" />
          </image>
       </ImageView>
+      <Label layoutX="121.0" layoutY="27.0" prefHeight="38.0" prefWidth="471.0" text="LIBRARY MANAGEMENET SYSTEM" textAlignment="CENTER" textFill="#b33939" wrapText="true">
+         <font>
+            <Font name="Arial Black" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

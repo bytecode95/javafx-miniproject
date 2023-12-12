@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -8,29 +9,33 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demofx.controllers.SaveMemberController">
    <children>
-      <AnchorPane fx:id="root" prefHeight="410.0" prefWidth="612.0">
+      <AnchorPane fx:id="root" prefHeight="700.0" prefWidth="700.0">
          <children>
-            <Text fill="#0e06ea" layoutX="142.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Registration Form" wrappingWidth="358.13670349121094">
+            <ImageView fitHeight="693.0" fitWidth="694.0" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/HOW-DO-YOU-DESIGN-A-LIBRARY-MANAGEMENT-SYSTEM-min-768x768.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="192.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEMBER REGISTRATION" wrappingWidth="296.53675842285156">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <TextField fx:id="txtMemberID" layoutX="142.0" layoutY="56.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter MemberID" />
-            <TextField fx:id="txtMemberName" layoutX="142.0" layoutY="101.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter Member Name" />
-            <TextField fx:id="txtMemberEmail" layoutX="142.0" layoutY="151.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter Member Email" />
-            <TextField fx:id="txtMemberAge" layoutX="142.0" layoutY="199.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter Member Age" />
-            <TextField fx:id="txtMemberAddress" layoutX="142.0" layoutY="254.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter Member Address" />
-            <Button layoutX="70.0" layoutY="326.0" mnemonicParsing="false" onAction="#save" prefHeight="42.0" prefWidth="143.0" style="-fx-background-color: green;" text="Save" textFill="WHITE">
+            <TextField fx:id="txtMemberID" layoutX="182.0" layoutY="215.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter MemberID" />
+            <TextField fx:id="txtMemberName" layoutX="182.0" layoutY="283.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter Member Name" />
+            <TextField fx:id="txtMemberEmail" layoutX="182.0" layoutY="350.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter Member Email" />
+            <TextField fx:id="txtMemberAge" layoutX="182.0" layoutY="416.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter Member Age" />
+            <TextField fx:id="txtMemberAddress" layoutX="182.0" layoutY="483.0" prefHeight="36.0" prefWidth="336.0" promptText="Enter Member Address" />
+            <Button layoutX="84.0" layoutY="586.0" mnemonicParsing="false" onAction="#save" prefHeight="42.0" prefWidth="143.0" style="-fx-background-color: black;" text="SAVE" textFill="WHITE">
                <font>
-                  <Font size="16.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="398.0" layoutY="326.0" mnemonicParsing="false" onAction="#cancel" prefHeight="42.0" prefWidth="143.0" style="-fx-background-color: red;" text="Cancel" textFill="WHITE">
+            <Button layoutX="442.0" layoutY="586.0" mnemonicParsing="false" onAction="#cancel" prefHeight="42.0" prefWidth="143.0" style="-fx-background-color: black;" text="CANCEL" textFill="WHITE">
                <font>
-                  <Font size="16.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Button>
             <ImageView fitHeight="52.0" fitWidth="70.0" layoutX="46.0" layoutY="27.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
@@ -38,6 +43,11 @@
                   <Image url="@../assets/icons8-back-48.png" />
                </image>
             </ImageView>
+            <Label layoutX="124.0" layoutY="27.0" prefHeight="38.0" prefWidth="471.0" text="LIBRARY MANAGEMENET SYSTEM" textAlignment="CENTER" textFill="#b33939" wrapText="true">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
