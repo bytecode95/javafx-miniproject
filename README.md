@@ -6,10 +6,17 @@ This is a simple JavaFX project that demonstrates the basics of building a graph
 
 The project consists of a JavaFX application that displays a windows Book saving, deleting, update and get details with full CRUD functionalities. This example serves as a starting point for those getting familiar with JavaFX.
 
+![Screenshot (722)](https://github.com/bytecode95/javafx-miniproject/assets/138282190/3bc19150-c687-48fd-ac5d-290d5cd632ed)
+![Screenshot (723)](https://github.com/bytecode95/javafx-miniproject/assets/138282190/8a582c54-0892-47df-be18-44bf07581a20)
+![Screenshot (724)](https://github.com/bytecode95/javafx-miniproject/assets/138282190/76bf5852-f2f6-401f-b865-00e995f39a6f)
+![Screenshot (725)](https://github.com/bytecode95/javafx-miniproject/assets/138282190/86d57ea5-dda1-49fb-a523-a72dc754fdef)
+![Screenshot (729)](https://github.com/bytecode95/javafx-miniproject/assets/138282190/9b5846c8-b59a-4a70-9d1b-89fcd80a5eb2)
+![Screenshot (730)](https://github.com/bytecode95/javafx-miniproject/assets/138282190/b872a5a6-062b-481e-92eb-7571c81296ec)
+![Screenshot (731)](https://github.com/bytecode95/javafx-miniproject/assets/138282190/7da6cee4-e13c-435c-a0a6-45e87326704d)
+![Screenshot (732)](https://github.com/bytecode95/javafx-miniproject/assets/138282190/814e7f59-e270-411c-a5d8-d70978f663ba)
+![Screenshot (733)](https://github.com/bytecode95/javafx-miniproject/assets/138282190/88195aea-caf9-4917-9ec2-79c5154fbd84)
+![Screenshot (734)](https://github.com/bytecode95/javafx-miniproject/assets/138282190/b87b955f-ba1d-4cbf-8cb6-0f32a4ddb2df)
 
-![Screenshot (537)](https://github.com/bytecode95/javafx-miniproject/assets/138282190/e52f5050-4078-41c7-84a2-351113d7fc4e)
-
-![Screenshot (538)](https://github.com/bytecode95/javafx-miniproject/assets/138282190/518a6d1a-d04a-429a-9245-e64483cc9ca7)
 
 ## Prerequisites
 
