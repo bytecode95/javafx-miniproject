@@ -66,4 +66,9 @@ public class MainMenuController {
             throw new RuntimeException(e);
         }
     }
+
+    @FXML
+    void cancel(ActionEvent event) {
+        System.exit(0);
+    }
 }

@@ -76,7 +76,7 @@
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Text>
-      <Button layoutX="285.0" layoutY="591.0" mnemonicParsing="false" onAction="#issueBook" prefHeight="35.0" prefWidth="202.0" style="-fx-background-color: #380936;" text="ISSUE" textFill="WHITE">
+      <Button layoutX="285.0" layoutY="542.0" mnemonicParsing="false" onAction="#issueBook" prefHeight="35.0" prefWidth="202.0" style="-fx-background-color: black;" text="ISSUE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
@@ -91,5 +91,15 @@
             <Font name="Arial Black" size="24.0" />
          </font>
       </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="237.0" layoutY="627.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/book.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="402.0" layoutY="627.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/booking.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -15,22 +15,22 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Text>
-      <Button layoutX="64.0" layoutY="430.0" mnemonicParsing="false" onAction="#ManageBook" prefHeight="94.0" prefWidth="226.0" style="-fx-background-color: #07402d;" text="MANAGE BOOKS" textFill="WHITE">
+      <Button layoutX="63.0" layoutY="408.0" mnemonicParsing="false" onAction="#ManageBook" prefHeight="94.0" prefWidth="226.0" style="-fx-background-color: #07402d;" text="MANAGE BOOKS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="401.0" layoutY="430.0" mnemonicParsing="false" onAction="#ManageMembers" prefHeight="94.0" prefWidth="226.0" style="-fx-background-color: #380936;" text="MANAGE MEMBERS" textFill="WHITE">
+      <Button layoutX="401.0" layoutY="408.0" mnemonicParsing="false" onAction="#ManageMembers" prefHeight="94.0" prefWidth="226.0" style="-fx-background-color: #380936;" text="MANAGE MEMBERS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="63.0" layoutY="563.0" mnemonicParsing="false" onAction="#issueBook" prefHeight="94.0" prefWidth="226.0" style="-fx-background-color: #87013e;" text="ISSUE BOOKS" textFill="WHITE">
+      <Button layoutX="63.0" layoutY="537.0" mnemonicParsing="false" onAction="#issueBook" prefHeight="94.0" prefWidth="226.0" style="-fx-background-color: #87013e;" text="ISSUE BOOKS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="401.0" layoutY="563.0" mnemonicParsing="false" onAction="#ReturnBook" prefHeight="94.0" prefWidth="226.0" style="-fx-background-color: #ffb512;" text="RETURN BOOKS" textFill="WHITE">
+      <Button layoutX="401.0" layoutY="537.0" mnemonicParsing="false" onAction="#ReturnBook" prefHeight="94.0" prefWidth="226.0" style="-fx-background-color: #ffb512;" text="RETURN BOOKS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -45,5 +45,10 @@
             <Image url="@../assets/library.png" />
          </image>
       </ImageView>
+      <Button layoutX="289.0" layoutY="660.0" mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: black;" text="CANCEL" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
